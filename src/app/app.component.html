@@ -1,62 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Master Events | Home</title>
-  </head>
-  <body>
-    <header>
-      <div class="container-fluid navbar-white mb-4">
-        <div class="container">
-          <nav class="navbar navbar-expand-sm navbar-light">
-            * Master Event
-            <!-- <img
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Events | Home</title>
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid navbar-white mb-4">
+      <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light">
+          * Master Event
+          <!-- <img
             src="assets/images/logos/logo.png"
             class="logo"
             alt="CloneDeal Logo"
           /> -->
-            <div class="col-1 d-flex justify-content-end">
-              <a
-                class="navbar-toggler collapsed border-0"
-                type="button"
-                data-toggle="collapse"
-                data-target="#collapsingNavbar"
-              >
-                <span> </span>
-                <span> </span>
-                <span> </span>
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="toggleMobileMenu">
-              <ul class="navbar-nav ms-auto text-center navbar-nav mx-auto">
-                <li>
-                  <a class="nav-link" id="active" href="home.html">Home</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="concerts.html">Concerts</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="sports.html">Sports</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="artandtheater.html"
-                    >Art & Theater</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link" href="more.html">More</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+          <div class="col-1 d-flex justify-content-end">
+            <a class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse"
+              data-target="#collapsingNavbar">
+              <span> </span>
+              <span> </span>
+              <span> </span>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="toggleMobileMenu">
+            <ul class="navbar-nav ms-auto text-center navbar-nav mx-auto">
+              <li>
+                <a class="nav-link" id="active" href="home.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-link" href="concerts.html">Concerts</a>
+              </li>
+              <li>
+                <a class="nav-link" href="sports.html">Sports</a>
+              </li>
+              <li>
+                <a class="nav-link" href="artandtheater.html">Art & Theater</a>
+              </li>
+              <li>
+                <a class="nav-link" href="more.html">More</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="main-banner" id="banner">
+      <div class="col-12 pt-4">
+        <div class="container">
+          <div class="row">
+            <form id="search-form">
+              <h3 style="text-align: center; margin-top: 0.4rem">
+                Let's Make Live Happen
+              </h3>
+              <div class="align-items-center">
+                <div class="row">
+                  <div class="ml-4 col-sm-4 col-lg-4">
+                    <label for="location">Location</label>
+                    <div class="input-group">
+                      <div class="input-group-text">
+                        <img src="icon/search.svg" alt="" />
+                      </div>
+                      <input id="location" type="text" class="form-control" id="location" placeholder="Dublin"/>
+                    </div>
+                  </div>
+                 <div class="col-sm-2">
+                    <label for="check-in">Date</label>
+                    <input type="date" class="form-control" id="check-in" />
+                  </div>
+                  <div class="ml-4 col-sm-4">
+                    <label for="search"></label>
+                    <div class="input-group">
+                      <div class="input-group-text">
+                        <img src="icon/search.svg" alt="" />
+                      </div>
+                      <input id="search" type="text" class="form-control" id="search" placeholder="Search for events, evenues, and artists"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="mt-4 text-center">
+                      <button type="submit" class="btn btn-primary" id="search">
+                        Search
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </header>
-    <main>
-      <div class="container"></div>
-    </main>
-    <footer></footer>
-  </body>
+    </div>
+    <div class="container">
+     
+    </div>
+  </main>
+  <footer></footer>
+</body>
 </html>
