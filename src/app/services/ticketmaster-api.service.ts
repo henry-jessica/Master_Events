@@ -16,8 +16,8 @@ export class TicketmasterApiService {
       .pipe(
         tap((data) => console.log("Eventdata/error") + JSON.stringify(data))
       );
-      
   }
+    eventsData?: Observable<IEvent>;
   private handleError(err:HttpErrorResponse){
     console.log('EventApiService: '+err.message); 
     return throwError("Error : "+err.message); 
