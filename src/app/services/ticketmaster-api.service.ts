@@ -8,7 +8,9 @@ import { IEvent } from "../Interfaces/ticketmaster";
   providedIn: "root",
 })
 export class TicketmasterApiService {
-  private _siteURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=H0Ad7cDF4VcZCpeq15al1teT3YFzCWT8&city=";
+  // private _siteURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=H0Ad7cDF4VcZCpeq15al1teT3YFzCWT8&city=";
+  private _siteURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=H0Ad7cDF4VcZCpeq15al1teT3YFzCWT8&keyword="; 
+
   constructor(private _http: HttpClient) {}
   getEventData(city:string): Observable<IEvent> {
     return this._http

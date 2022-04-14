@@ -10,15 +10,27 @@ import{IEvent} from './Interfaces/ticketmaster';
 export class AppComponent {
   title = 'Master_Events';
 
-  show?: boolean; 
-  location ?:string; 
+  eventData?: any; 
+  eventsData?:any[]; 
+  errorMessage:any; 
 
-  getEventDetail(location:string):boolean{
-    this.show = true; 
-    this.location = location; 
-    console.log(this.show); 
-    console.log(this.location); 
-   return false; 
+  constructor(private _ticketMasterService: TicketmasterApiService){
+    } 
+getEventDetail(eventLocate:string):boolean{
+  this._ticketMasterService.getEventData(eventLocate).subscribe(
+    eventData => {
+      this.eventData=eventData; 
+      this.eventsData = this.eventData._embedded.events; 
+      console.log('events', this.eventsData); 
+
+      this.eventsData?.forEach(element => {
+        console.log(element.name); 
+      });
+    }, 
+    error=> this.errorMessage = <any>error 
+  ); 
+return false; 
+
   }
-
+  
 }
