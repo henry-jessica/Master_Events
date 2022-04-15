@@ -14,8 +14,8 @@ export class AppComponent {
   eventsData?:any[]; 
   errorMessage:any; 
 
-  constructor(private _ticketMasterService: TicketmasterApiService){
-    } 
+  constructor(private _ticketMasterService: TicketmasterApiService){ } 
+
 getEventDetail(eventLocate:string):boolean{
   this._ticketMasterService.getEventData(eventLocate).subscribe(
     eventData => {
