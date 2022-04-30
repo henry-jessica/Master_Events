@@ -24,4 +24,6 @@ export class TicketmasterApiService {
     console.log('EventApiService: '+err.message); 
     return throwError("Error : "+err.message); 
   }
+
+  
 }
