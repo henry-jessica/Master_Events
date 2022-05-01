@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row bg-light">
+    <div class="col-4">
+      <img
+        class="card-img-top"
+        src="{{eventData?.images?.[0]?.url}}"
+        alt="Card image cap"
+      />
+      <p class="mt-3 pl-3 pl-md-2">
+        <span>Tickets : </span>
+        <span>{{eventData?.dates?.status?.code | titlecase}}</span>
+    </p>
+
+    </div>
+    <div class="col-8">
+      <h1>{{ eventData?.name }}</h1>
+      <h6 class="base-color mb-0">
+        {{ eventData?.dates?.start?.localDate | date }}
+      </h6>
+      <span class="base-color">{{eventData?.dates?.start?.localDate |date : 'fullDate'}}</span>
+      <p class="lead mt-2">{{eventData?.dates?.start?.dateTime |date:'shortTime'}}</p>
+      <ul>
+        <li class="list-group-item"> Venue: {{eventData?._embedded?.venues?.[0]?.name}} ({{eventData?._embedded?.venues?.[0]?.city?.name}})</li>
+        <li class="list-group-item"> Address: {{eventData?._embedded?.venues?.[0]?.address?.line1}} </li>
+        <li class="list-group-item"> Address: {{eventData?.classifications?.[0]?.segment?.name}}</li>
+        <li class="list-group-item"> Genre: {{eventData?.classifications?.[0]?.genre?.name}}</li>
+    </ul>
+    </div>
+  </div>
+</div>

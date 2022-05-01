@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { EventComponent } from './components/event/event.component';
 import { HomeComponent } from './components/home/home.component';
-import { EventDetailsComponent } from './event-details/event-details.component';
+import { EventDetailsComponent } from './components/event-details/event-details.component';
 
 const routes: Routes = [
     { path: 'event/:id', component: EventDetailsComponent },

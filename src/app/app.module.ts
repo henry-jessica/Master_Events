@@ -8,7 +8,7 @@ import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ListEventsComponent } from './components/list-events/list-events.component';
 import { SearchComponent } from './components/search/search.component';
-import { EventDetailsComponent } from './event-details/event-details.component';
+import { EventDetailsComponent } from './components/event-details/event-details.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './routing';
 import { AboutComponent } from './components/about/about.component';

@@ -28,8 +28,9 @@ export class TicketmasterApiService {
     return throwError("error : " + err.message); 
   } 
   
-  getEvent(id: string): Observable<IEvent> {
-    return this._http.get<IEvent>(this._siteURL+"events/"+id+"?apikey="+this._apiKey+this._search); 
+  getEvent(id: string|undefined): Observable<IEvent> {
+    console.log(id); 
+    return this._http.get<IEvent>(this._siteURL+"events/"+id+"?apikey="+this._apiKey); 
   }
 
 }
