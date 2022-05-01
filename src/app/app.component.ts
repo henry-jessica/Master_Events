@@ -10,17 +10,17 @@ import{IEvent} from './Interfaces/ticketmaster';
 export class AppComponent {
 
 
-  eventData?: IEvent; 
-  eventsData?:any[]; 
+  eventData?: any; 
+  eventsData?:IEvent[]; 
   errorMessage:any; 
-
-  constructor(private _ticketMasterService: TicketmasterApiService){ } 
-
-getEventDetail(keyword:string):boolean{
-  this._ticketMasterService.getEventData(keyword).subscribe(
+  
+  constructor(private _eventAPIService: TicketmasterApiService) { }
+  
+  getEventDetail(location:string):boolean{
+  this._eventAPIService.getEventData(location).subscribe(
     eventData => {
       this.eventData=eventData; 
-     // this.eventsData = this.eventData._embedded.events; 
+      this.eventsData = this.eventData._embedded.events; 
       console.log('events', this.eventsData); 
 
       this.eventsData?.forEach(element => {
@@ -29,8 +29,7 @@ getEventDetail(keyword:string):boolean{
     }, 
     error=> this.errorMessage = <any>error 
   ); 
-return false; 
-
+  return false; 
   }
   
 }

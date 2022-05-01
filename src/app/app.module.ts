@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { EventComponent } from './components/event/event.component';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { ListEventsComponent } from './components/list-events/list-events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventComponent
+    EventComponent, 
+    ListEventsComponent
   ],
   imports: [
     BrowserModule, 

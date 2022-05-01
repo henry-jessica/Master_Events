@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IEvent } from 'src/app/Interfaces/ticketmaster';
 
 @Component({
   selector: 'app-event',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class EventComponent implements OnInit {
 
   constructor() { }
+
+  @Input() event?:IEvent; 
 
   ngOnInit(): void {
   }

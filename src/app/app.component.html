@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Master Events | Home</title>
-  </head>
 
   <body>
     <header>
@@ -65,7 +57,7 @@
                       <label for="location">Location</label>
                       <div class="input-group">
                         <div class="input-group-text">
-                          <img src="icon/search.svg" alt="" />
+                         
                         </div>
                         <input
                           id="location"
@@ -113,9 +105,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
 
-      <div class="container">
+      <app-list-events [location]="location.value"></app-list-events>
+      <!-- <div class="container">
         <div class="row">
           <div class="col-3 p-2" *ngFor="let event of eventsData">
             <div class="card" style="width: 18rem">
@@ -125,19 +118,13 @@
                 alt="Card image cap"
                 
               />
-              <!-- <div class="card-body"> -->
                 <p class="card-title event">{{ event.name }}</p>
-                <!-- <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p> -->
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-              <!-- </div> -->
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+
+
     </main>
     <footer></footer>
   </body>
-</html>
