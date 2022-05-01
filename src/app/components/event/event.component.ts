@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IEvent } from 'src/app/Interfaces/ticketmaster';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-event',
@@ -8,11 +9,18 @@ import { IEvent } from 'src/app/Interfaces/ticketmaster';
 })
 export class EventComponent implements OnInit {
 
-  constructor() { }
-
-  @Input() event?:IEvent; 
-
-  ngOnInit(): void {
+  constructor(private route:ActivatedRoute){
+    this.route.params
+    .subscribe(params=>console.log(params)); 
   }
 
+  @Input() event?:IEvent; 
+  eventData?:IEvent; 
+
+  ngOnInit(): void {
+
+  }
 }
+
+
+
