@@ -13,13 +13,13 @@ export class TicketmasterApiService {
   constructor(private _http: HttpClient) {}
 
   getEventData(keyword:string): Observable<IEvent> {
-    return this._http.get<IEvent>(this._siteURL+keyword)
+    return this._http.get<IEvent>(this._siteURL+this._search+keyword)
     .pipe(
       tap(data => console.log('Event/error' + JSON.stringify(data))),
       catchError(this.handleError));
   }
   private handleError(err: HttpErrorResponse) {
-    console.log('OmdApiService' + err.message); 
+    console.log('EventMaster' + err.message); 
     return throwError("error : " + err.message); 
   }  
 }

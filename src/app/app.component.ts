@@ -8,19 +8,19 @@ import{IEvent} from './Interfaces/ticketmaster';
   providers:[TicketmasterApiService]
 })
 export class AppComponent {
-  title = 'Master_Events';
 
-  eventData?: any; 
+
+  eventData?: IEvent; 
   eventsData?:any[]; 
   errorMessage:any; 
 
   constructor(private _ticketMasterService: TicketmasterApiService){ } 
 
-getEventDetail(eventLocate:string):boolean{
-  this._ticketMasterService.getEventData(eventLocate).subscribe(
+getEventDetail(keyword:string):boolean{
+  this._ticketMasterService.getEventData(keyword).subscribe(
     eventData => {
       this.eventData=eventData; 
-      this.eventsData = this.eventData._embedded.events; 
+     // this.eventsData = this.eventData._embedded.events; 
       console.log('events', this.eventsData); 
 
       this.eventsData?.forEach(element => {
