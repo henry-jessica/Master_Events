@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import{TicketmasterApiService} from './services/ticketmaster-api.service'; 
 import{IEvent} from './Interfaces/ticketmaster'; 
+import { faSmile } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,6 +10,8 @@ import{IEvent} from './Interfaces/ticketmaster';
 })
 export class AppComponent {
   showFavorites?: boolean;
+
+  faSmile=faSmile; 
 
   FavoriteSelected(){
     this.showFavorites=true; 

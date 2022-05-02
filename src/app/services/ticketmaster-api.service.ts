@@ -43,13 +43,11 @@ export class TicketmasterApiService {
       .pipe(tap(), catchError(this.handleError));
   }
   private handleError(err: HttpErrorResponse) {
-    console.log("Error" + err.message);
     return throwError("error : " + err.message);
   }
 
   // Get Events From API
   getEvent(id: string | undefined): Observable<IEvent> {
-    console.log(id);
     return this._http.get<IEvent>(
       this._siteURL + "events/" + id + "?apikey=" + this._apiKey
     );
@@ -69,9 +67,6 @@ export class TicketmasterApiService {
   }
   
   delfavoriteData(event?: any): void{
-    console.log(event); 
     this.eventsDataCollection.doc(event?.collectionId).delete(); 
-
 }
-
 }

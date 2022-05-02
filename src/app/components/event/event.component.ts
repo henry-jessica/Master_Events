@@ -22,7 +22,6 @@ export class EventComponent implements OnInit {
   //eventData?:IEvent; 
 
   ngOnInit(): void {
-    console.log('event', this.event?.name); 
     if(this.favorites)
     this.btnName="Remove"; 
   }
@@ -40,12 +39,9 @@ export class EventComponent implements OnInit {
     let tempEvent:Event; 
     tempEvent = new Event(event); 
     this._eventApiService?.addEventData(tempEvent.event); 
-    console.log('temEvent', tempEvent.event); 
-    console.log(event); 
     return false;  
   }
   DeleteFavorite(event?:IEvent):boolean{
-    console.log(event?.id)
     this._eventApiService?.delfavoriteData(event); 
     return false; 
   }
