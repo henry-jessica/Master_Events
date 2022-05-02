@@ -1,0 +1,56 @@
+              <form id="search-form">
+                <h3 style="text-align: center; margin-top: 0.4rem">
+                  Let's Make Live Happen
+                </h3>
+                <div class="align-items-center">
+                  <div class="row">
+                    <div class="ml-4 col-sm-4 col-lg-4">
+                      <label for="location">Location</label>
+                      <div class="input-group">
+                        <div class="input-group-text">
+                         
+                        </div>
+                        <input
+                          id="location"
+                          #keyword
+                          type="text"
+                          class="form-control"
+                          id="location"
+                          placeholder="Dublin"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <label for="check-in">Date</label>
+                      <input type="date" class="form-control" id="check-in" />
+                    </div>
+                    <div class="ml-4 col-sm-4">
+                      <label for="search"></label>
+                      <div class="input-group">
+                        <div class="input-group-text">
+                          <img src="icon/search.svg" alt="" />
+                        </div>
+                        <input
+                          id="search"
+                          type="text"
+                          class="form-control"
+                          id="search"
+                          placeholder="Search for events, evenues, and artists"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="mt-4 text-center">
+                        <button
+                          type="submit"
+                          class="btn btn-primary"
+                          id="search"
+                          (click)="getEventDetail(keyword.value)">
+                          Search
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+        <app-list-events [eventsData]="this.eventsData"></app-list-events> 

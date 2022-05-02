@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
-
+import{TicketmasterApiService} from './services/ticketmaster-api.service'; 
+import{IEvent} from './Interfaces/ticketmaster'; 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'], 
+  providers:[TicketmasterApiService]
 })
 export class AppComponent {
-  title = 'Master_Events';
+  showFavorites?: boolean;
+
+  FavoriteSelected(){
+    this.showFavorites=true; 
+  }
 }
