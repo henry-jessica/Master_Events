@@ -12,13 +12,14 @@ import { EventDetailsComponent } from './components/event-details/event-details.
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './routing';
 import { AboutComponent } from './components/about/about.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EventComponent, 
-    ListEventsComponent, SearchComponent, EventDetailsComponent, HomeComponent, AboutComponent, 
+    ListEventsComponent, SearchComponent, EventDetailsComponent, HomeComponent, AboutComponent, FavoritesComponent, 
   ],
   imports: [
     BrowserModule, 

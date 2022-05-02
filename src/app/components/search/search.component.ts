@@ -14,7 +14,6 @@ export class SearchComponent implements OnInit {
   errorMessage:any; 
 
   ngOnInit(): void {
-    this.getEventFavoriteData(); 
   }
   constructor(private _ticketMasterService: TicketmasterApiService){
  }
@@ -32,9 +31,9 @@ export class SearchComponent implements OnInit {
     return false; 
     }
 
-    getEventFavoriteData(){
-      this._ticketMasterService.getEventFavoriteData().subscribe(eventsFavoriteData =>
-        { this.eventsFavoriteData = eventsFavoriteData }); 
-        console.log(this.eventsFavoriteData); 
-    }
+    // getEventFavoriteData(){
+    //   this._ticketMasterService.getEventFavoriteData().subscribe(eventsFavoriteData =>
+    //     { this.eventsFavoriteData = eventsFavoriteData }); 
+    //     console.log(this.eventsFavoriteData); 
+    // }
 }

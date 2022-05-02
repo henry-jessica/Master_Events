@@ -12,6 +12,7 @@ export class ListEventsComponent implements OnInit {
   @Input() eventsData?:IEvent[]
 
   ngOnInit(): void {
+    console.log('get list', this.eventsData); 
   }
   constructor(){
  }

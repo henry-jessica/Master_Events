@@ -1,15 +1,26 @@
     
-export class Event{
-    name: string;
-    images:IImage[]; 
-    dates: string;
-    id:string; 
+// export class Event{
+//   //  Event?:IEvent; 
+//     name?: string;
+//     // images?:IImage[]; 
+//     dates?: IDates;
+//     id?:string; 
     
-    constructor(name:string, images:IImage[], dates:string, id:string){
-        this.name = name; 
-        this.images = images; 
-        this.dates = dates; 
-        this.id = id; 
+//     constructor(name?:string, dates?:IDates, id?:string){
+//         this.name = name; 
+//         // this.images = images; 
+//         this.dates = dates; 
+//         this.id = id; 
+//    //     this.Event=Event; 
+//     }
+
+// }
+
+export class Event{
+   event?:IEvent; 
+    
+    constructor(event?:IEvent){
+       this.event = event; 
     }
 
 }

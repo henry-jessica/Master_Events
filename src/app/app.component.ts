@@ -8,5 +8,9 @@ import{IEvent} from './Interfaces/ticketmaster';
   providers:[TicketmasterApiService]
 })
 export class AppComponent {
+  showFavorites?: boolean;
 
+  FavoriteSelected(){
+    this.showFavorites=true; 
+  }
 }
