@@ -1,21 +1,3 @@
-    
-// export class Event{
-//   //  Event?:IEvent; 
-//     name?: string;
-//     // images?:IImage[]; 
-//     dates?: IDates;
-//     id?:string; 
-    
-//     constructor(name?:string, dates?:IDates, id?:string){
-//         this.name = name; 
-//         // this.images = images; 
-//         this.dates = dates; 
-//         this.id = id; 
-//    //     this.Event=Event; 
-//     }
-
-// }
-
 export class Event{
    event?:IEvent; 
     

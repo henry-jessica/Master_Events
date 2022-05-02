@@ -2,7 +2,8 @@
   <div class="row">
     <div class="col-3 p-2" *ngFor="let event of eventsData">
       <div class="card" style="width: 18rem">
-        <app-event [event]="event"></app-event>
+        <app-event [event]="event"
+                   [favorites]="favorites"></app-event>
       </div>
     </div>
   </div>

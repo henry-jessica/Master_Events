@@ -10,9 +10,9 @@ import { TicketmasterApiService } from 'src/app/services/ticketmaster-api.servic
 })
 export class ListEventsComponent implements OnInit {
   @Input() eventsData?:IEvent[]
+  @Input() favorites?:boolean; 
 
   ngOnInit(): void {
-    console.log('get list', this.eventsData); 
   }
   constructor(){
  }

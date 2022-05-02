@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
   errorMessage:any; 
 
   ngOnInit(): void {
+    this.getEventDetail("Sligo"); 
   }
   constructor(private _ticketMasterService: TicketmasterApiService){
  }

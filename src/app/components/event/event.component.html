@@ -10,9 +10,5 @@
           </p>
 
           <a class="btn btn-primary" routerLink="event/{{event?.id}}">See Event</a>
-          <a class="btn btn-primary" (click)="AddToFavorite(event)">Add to Favorite</a>
+          <a class="btn btn-primary" (click)="AddOrRemove(event)">{{btnName}}</a>
           <!-- <a [routerLink]="['/event', event?.id]">See Event</a> -->
-
-          <!-- <p>{{event?.event.name|json}}</p> -->
-          <!-- <p>{{event?.name}}</p> -->
-

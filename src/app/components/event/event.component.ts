@@ -9,6 +9,7 @@ import { TicketmasterApiService } from 'src/app/services/ticketmaster-api.servic
   styleUrls: ['./event.component.scss']
 })
 export class EventComponent implements OnInit {
+  btnName?: string="Add to Favorite";
 
 
   constructor(private route:ActivatedRoute,   private _eventApiService?: TicketmasterApiService){
@@ -17,18 +18,38 @@ export class EventComponent implements OnInit {
   }
 
   @Input() event?:IEvent; 
+  @Input() favorites?:boolean; 
   //eventData?:IEvent; 
 
   ngOnInit(): void {
     console.log('event', this.event?.name); 
+    if(this.favorites)
+    this.btnName="Remove"; 
   }
+  AddOrRemove(event?:IEvent):boolean{
+    if(this.favorites){
+      this.DeleteFavorite(event); 
+    }
+    else{
+      this.AddToFavorite(event); 
+    }
+    return false; 
+  }
+
   AddToFavorite(event?:IEvent): boolean{
     let tempEvent:Event; 
     tempEvent = new Event(event); 
     this._eventApiService?.addEventData(tempEvent.event); 
     console.log('temEvent', tempEvent.event); 
+    console.log(event); 
     return false;  
   }
+  DeleteFavorite(event?:IEvent):boolean{
+    console.log(event?.id)
+    this._eventApiService?.delfavoriteData(event); 
+    return false; 
+  }
+
 
 }
 
