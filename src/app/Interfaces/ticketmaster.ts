@@ -1,5 +1,20 @@
     
-    export interface IEvent {
+export class Event{
+    name: string;
+    images:IImage[]; 
+    dates: string;
+    id:string; 
+    
+    constructor(name:string, images:IImage[], dates:string, id:string){
+        this.name = name; 
+        this.images = images; 
+        this.dates = dates; 
+        this.id = id; 
+    }
+
+}
+
+export interface IEvent {
         name: string;
         type: string;
         id: string;

@@ -10,10 +10,11 @@ import { TicketmasterApiService } from 'src/app/services/ticketmaster-api.servic
 export class SearchComponent implements OnInit {
   eventData?: any; 
   eventsData?:IEvent[]; 
+  eventsFavoriteData?:IEvent[]; 
   errorMessage:any; 
 
   ngOnInit(): void {
-
+    this.getEventFavoriteData(); 
   }
   constructor(private _ticketMasterService: TicketmasterApiService){
  }
@@ -29,5 +30,11 @@ export class SearchComponent implements OnInit {
       error=> this.errorMessage = <any>error 
     ); 
     return false; 
+    }
+
+    getEventFavoriteData(){
+      this._ticketMasterService.getEventFavoriteData().subscribe(eventsFavoriteData =>
+        { this.eventsFavoriteData = eventsFavoriteData }); 
+        console.log(this.eventsFavoriteData); 
     }
 }

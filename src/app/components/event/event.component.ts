@@ -20,6 +20,11 @@ export class EventComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  AddToFavorite(): boolean{
+
+    return false;
+  }
+
 }
 
 

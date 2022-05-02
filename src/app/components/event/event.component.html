@@ -1,17 +1,14 @@
        <img class="card-img-top" style=" height: 160px;" 
-            src="{{event?.images?.[0]?.url}}" 
-            alt="Card image cap" />
+       src="{{event?.images?.[0]?.url}}" alt="Card image cap" />
        <div class="card-body">
-           <h5 class="card-title">{{ event?.name }}</h5>
-           <p class="card-text">
-              {{event?.dates?.start?.localDate | date }}
-           </p>
-           <p class="card-text">
-            {{event?._embedded?.venues?.[0]?.name}}
-         </p>
+          <h5 class="card-title">{{ event?.name }}</h5>
+          <p class="card-text">
+             {{event?.dates?.start?.localDate | date }}
+          </p>
+          <p class="card-text">
+             {{event?._embedded?.venues?.[0]?.name}}
+          </p>
 
-         <!-- <a routerLink="event/{{event?.id}}">See Event</a>  -->
-         <a 
-  [routerLink]="['/event', event?.id]">
-see Event
-</a>
+          <a class="btn btn-primary" routerLink="event/{{event?.id}}">See Event</a>
+          <a class="btn btn-primary" Click="AddToFavorite(event?.id)">Add to Favorite</a>
+          <!-- <a [routerLink]="['/event', event?.id]">See Event</a> -->
