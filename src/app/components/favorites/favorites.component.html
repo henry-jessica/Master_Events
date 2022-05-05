@@ -1,10 +1,16 @@
 <!-- if favorite is equal true -->
 
-<div class="container">
-  <h3 class="text-center p-4">My Favorites</h3>
+<div class="wrapper">
+<app-hero [title]="'Favorites'"
+          [image]="'/assets/images/favorites1.jpg'"
+          [subTitle]="'your list of favorite events'"></app-hero>
+
+ <div class="container mt-3">
   <app-list-events
     [eventsData]="this.eventsData"
     [favorites]="true"></app-list-events>
 
-  <div *ngIf="eventsData?.length == 0">No favorites found</div>
+  <div class="p-4" *ngIf="eventsData?.length == 0">Your list of favorites is empty</div>
+</div> 
 </div>
+
