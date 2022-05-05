@@ -19,7 +19,6 @@ export class FavoritesComponent implements OnInit {
   getEventFavoriteDataTest(){
     this._eventsApiService.getEventFavoriteData().subscribe(eventsData =>
       { this.eventsData = eventsData }); 
-      console.log(this.eventsData);
   }
 
 }

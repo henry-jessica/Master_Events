@@ -13,6 +13,7 @@ export class ListEventsComponent implements OnInit {
   @Input() favorites?:boolean; 
 
   ngOnInit(): void {
+    console.log(this.favorites); 
   }
   constructor(){
  }

@@ -10,6 +10,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 const routes: Routes = [
     { path: 'event/:id', component: EventDetailsComponent },
     { path: 'favorites/event/:id', component: EventDetailsComponent },
+    { path: 'home/event/:id', component: EventDetailsComponent },
     { path: '', component: HomeComponent },
     { path: '#', component: HomeComponent },
     { path: 'home', component: HomeComponent },

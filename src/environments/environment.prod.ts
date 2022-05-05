@@ -9,5 +9,6 @@ export const environment = {
     storageBucket: "event-web-final-project.appspot.com",
     messagingSenderId: "806645342611",
     appId: "1:806645342611:web:f87ff9f7bc1d2304b6c866"
+    
   }
 };

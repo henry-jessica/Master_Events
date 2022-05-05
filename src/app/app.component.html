@@ -1,33 +1,59 @@
-
-    <div class="container-fluid navbar-white mb-4">
+<!-- <div class="container-fluid navbar-white mb-4">
  <div class="container">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="" routerLinkActive="active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">Concerts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Sports</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Art & Theater</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/favorites" routerLinkActive="active">Favorites</a>
-        </li>
-      </ul>
+    <div class="collapse navbar-collapse text-center d-flex justify-content-center" id="navbarNav">
+     
     </div>
   </div>
 </nav>
  </div>
-</div>
+</div> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerlink="" href="/home">
+      <img
+        src="/assets/images/logo.png"
+        width="40"
+        height="24"
+        alt="MasterEvents"
+        class="img-fluid img-thumbnail"
+      />
+      MasterEvents</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active"
+            >About Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact"  routerLinkActive="active"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <a class="nav-link text-center " routerLink="/favorites" routerLinkActive="active">
+        <fa-icon [icon]="faStar"></fa-icon>
+        <p>3</p>
+      </a>
+    </div>
+  </div>
+</nav>
 
+ 
 <router-outlet></router-outlet>

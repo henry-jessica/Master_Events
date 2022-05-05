@@ -1,5 +1,4 @@
-       <img class="card-img-top" style=" height: 160px;" 
-       src="{{event?.images?.[0]?.url}}" alt="Card image cap" />
+       <img class="card-img-top" style=" height: 160px;" src="{{event?.images?.[0]?.url}}" alt="Card image cap" />
        <div class="card-body">
           <h5 class="card-title">{{ event?.name }}</h5>
           <p class="card-text">
@@ -9,6 +8,10 @@
              {{event?._embedded?.venues?.[0]?.name}}
           </p>
 
-          <a class="btn btn-primary" routerLink="event/{{event?.id}}">See Event</a>
-          <a class="btn btn-primary" (click)="AddOrRemove(event)">{{btnName}}</a>
+          
+<div class="row text-center">
+   <a class="btn btn-primary d-flex justify-content-start col-10 text-center" routerLink="event/{{event?.id}}">See Event</a>
+   <a class="btn d-flex justify-content-end col-2 text-center" (click)="AddOrRemove(event)" ><fa-icon [icon]="star"></fa-icon></a>
+</div>
+      
           <!-- <a [routerLink]="['/event', event?.id]">See Event</a> -->

@@ -20,14 +20,12 @@ export class EventDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    console.log(this.id); 
     this.getEvent(); 
   }
   getEvent():boolean{
     this._ticketMasterService.getEvent(this.id).subscribe(
       eventData => {
         this.eventData=eventData; 
-        console.log(this.eventData);
         this.eventData = this.eventData;   
       }, 
       // error=> this.errorMessage = <any>error 

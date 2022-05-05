@@ -13,8 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './routing';
 import { AboutComponent } from './components/about/about.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
-
-
+import{FontAwesomeModule} from '@fortawesome/angular-fontawesome'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +25,8 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     HttpClientModule, 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireModule, 
-    AppRoutingModule
+    AppRoutingModule, 
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
