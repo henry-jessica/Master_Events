@@ -92,15 +92,13 @@ star:any=this.fasStar ;
 
   ngOnInit(): void {
     if(this.favorites){
-      this.star=this.fasStar; 
+      this.star=this.farStar; 
       this.btnName="Remove"; 
     }
   
   }
   AddOrRemove(event?:IEvent):boolean{
     if(this.favorites){
-      //this.star=this.farStar; 
-      console.log(this.favorites);  
       this.DeleteFavorite(event); 
     }
     else{
