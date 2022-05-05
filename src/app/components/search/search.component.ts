@@ -31,10 +31,4 @@ export class SearchComponent implements OnInit {
     ); 
     return false; 
     }
-
-    // getEventFavoriteData(){
-    //   this._ticketMasterService.getEventFavoriteData().subscribe(eventsFavoriteData =>
-    //     { this.eventsFavoriteData = eventsFavoriteData }); 
-    //     console.log(this.eventsFavoriteData); 
-    // }
 }
