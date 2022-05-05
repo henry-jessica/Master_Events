@@ -10,13 +10,12 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
   providers:[TicketmasterApiService]
 })
 export class AppComponent {
-  showFavorites?: boolean;
-
-  faSmile=faSmile; 
-  faStar=faStar; 
+  // showFavorites?: boolean;
+  // faSmile=faSmile; 
+  // faStar=faStar; 
   
 
-  FavoriteSelected(){
-    this.showFavorites=true; 
-  }
+  // FavoriteSelected(){
+  //   this.showFavorites=true; 
+  // }
 }
