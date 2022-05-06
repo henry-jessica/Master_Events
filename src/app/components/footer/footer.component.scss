@@ -1,0 +1,44 @@
+@import "../../../variables.scss";
+
+footer {
+	text-align: center;
+	padding: 1rem 0rem;
+	color: #e3e7ec !important;
+
+	h2 {
+		color: #333 !important;
+		font-size: 1rem;
+		text-transform: uppercase;
+		padding: 1rem 0px 0px 0px;
+		// font-weight: 700;
+	}
+
+	ul {
+		list-style-type: none;
+		align-items: center;
+
+		a {
+			color: #e3e7ec ;
+			font-size: 1rem !important;
+		}
+	}
+
+
+
+	p em {
+		font-style: normal;
+		font-weight: 700;
+
+	}
+
+	.btn-outline-light {
+		// margin-bottom: 40px;
+
+		a {
+			text-decoration: none;
+			text-align: center;
+			color: $color-white;
+		}
+
+	}
+}

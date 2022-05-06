@@ -1,8 +1,12 @@
-<div class="container">
+<div class="wrapper">
+  <app-hero [title]="eventData?.name"
+            [image]="'/assets/images/folder.jpg'"
+            [subTitle]="''"></app-hero>
+<div class="container p-2 mt-4">
   <div class="row bg-light">
     <div class="col-4">
       <img
-        class="card-img-top"
+        class="card-img-top p-2"
         src="{{eventData?.images?.[0]?.url}}"
         alt="Card image cap"
       />
@@ -17,8 +21,8 @@
       <h6 class="base-color mb-0">
         {{ eventData?.dates?.start?.localDate | date }}
       </h6>
-      <span class="base-color">{{eventData?.dates?.start?.localDate |date : 'fullDate'}}</span>
-      <p class="lead mt-2">{{eventData?.dates?.start?.dateTime |date:'shortTime'}}</p>
+      <!-- <span class="base-color">{{eventData?.dates?.start?.localDate|date : 'fullDate'}}</span> -->
+      <p class="mt-2">{{eventData?.dates?.start?.dateTime |date:'shortTime'}}</p>
       <ul>
         <li class="list-group-item"> Venue: {{eventData?._embedded?.venues?.[0]?.name}} ({{eventData?._embedded?.venues?.[0]?.city?.name}})</li>
         <li class="list-group-item"> Address: {{eventData?._embedded?.venues?.[0]?.address?.line1}} </li>
@@ -26,5 +30,6 @@
         <li class="list-group-item"> Genre: {{eventData?.classifications?.[0]?.genre?.name}}</li>
     </ul>
     </div>
+  </div>
   </div>
 </div>

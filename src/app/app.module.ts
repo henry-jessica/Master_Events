@@ -13,12 +13,15 @@ import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './routing';
 import { AboutComponent } from './components/about/about.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
-import{FontAwesomeModule} from '@fortawesome/angular-fontawesome'
+import{FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { NavComponent } from './nav/nav.component'
 @NgModule({
   declarations: [
     AppComponent,
     EventComponent, 
-    ListEventsComponent, SearchComponent, EventDetailsComponent, HomeComponent, AboutComponent, FavoritesComponent, 
+    ListEventsComponent, SearchComponent, EventDetailsComponent, HomeComponent, AboutComponent, FavoritesComponent, FooterComponent, HeroComponent, NavComponent, 
   ],
   imports: [
     BrowserModule, 

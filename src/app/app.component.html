@@ -1,15 +1,4 @@
-<!-- <div class="container-fluid navbar-white mb-4">
- <div class="container">
-<nav class="navbar navbar-expand-lg ">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse text-center d-flex justify-content-center" id="navbarNav">
-     
-    </div>
-  </div>
-</nav>
- </div>
-</div> -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" routerlink="" href="/home">
       <img
@@ -42,18 +31,14 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact"  routerLinkActive="active"
-            >Contact</a
+          <a class="nav-link" routerLink="/favorites"  routerLinkActive="active"
+            >Favorites</a
           >
         </li>
       </ul>
-      <a class="nav-link text-center " routerLink="/favorites" routerLinkActive="active">
-        <fa-icon [icon]="faStar"></fa-icon>
-        <p>3</p>
-      </a>
     </div>
   </div>
-</nav>
-
- 
+</nav> -->
+<app-nav></app-nav>
 <router-outlet></router-outlet>
+<app-footer></app-footer>

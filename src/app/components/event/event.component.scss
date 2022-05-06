@@ -1,0 +1,19 @@
+.card{
+    min-height: 24rem !important; 
+}
+.card-footer {
+    border-top: none; 
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: none; 
+     border-radius: none; 
+    box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
+}
