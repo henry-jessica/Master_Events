@@ -16,7 +16,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import{FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { NavComponent } from './nav/nav.component'
+import { NavComponent } from './components/nav/nav.component';
 @NgModule({
   declarations: [
     AppComponent,
